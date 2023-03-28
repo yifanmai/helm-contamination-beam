@@ -20,13 +20,13 @@ pip install bitarray~=2.7.3
 ## Running
 
 Running without Apache Beam:
-```
+```bash
 python3 run_contamination_local.py --input-data /path/to/input_data.jsonl --scenario-data /path/to/scenario_data.jsonl --input-format the_pile --output-stats /path/to/output_stats.jsonl
 ```
 
 Running with Apache Beam:
 
-```
+```bash
 python3 run_contamination_beam.py --input-data /path/to/input_data.jsonl --scenario-data /path/to/scenario_data.jsonl --input-format the_pile --output-stats /path/to/output_stats.jsonl
 ```
 
@@ -36,7 +36,7 @@ Model developers should implement an Apache Beam pipeline that creates a `PColle
 
 Note: Each record in the `PCollection[str]` should contain an _entire_ document, not a single line from a document.
 
-```
+```python
 with beam.Pipeline() as pipeline:
     _ = (
         pipeline
