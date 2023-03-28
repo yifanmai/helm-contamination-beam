@@ -1,8 +1,8 @@
-# Apache Beam implementation of HELM
+# Apache Beam implementation of HELM Contamination
 
 ## Installation
 
-```
+```bash
 # Create a virtual environment.
 # Only run this the first time.
 python3 -m pip install virtualenv
